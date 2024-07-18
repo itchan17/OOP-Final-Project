@@ -1,0 +1,22 @@
+                    Lomi Haus
+            Santa Rosa City, Laguna
+             Mobile No. 09123456789
+Order Date:2024-07-18     
+Order Time:10:47:20       
+Order No.  100263         
+Cashier:   1016 - Admin   
+----------------------------------------------
+Qty  Item           Size      Each       Total        
+
+1    Miki Guisado   Regular   75.00      75.00
+1    Lugaw          Regular   70.00      70.00
+----------------------------------------------
+Sub Total:                              145.00
+VAT - 12%:                               15.54
+Discount:                                 0.00
+Total:                                  145.00
+
+Total Payment:                          200.00
+Change:                                  55.00
+----------------------------------------------
+             Thank You for Purchasing

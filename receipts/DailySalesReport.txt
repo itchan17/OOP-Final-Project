@@ -1,0 +1,16 @@
+                DAILY SALES REPORT
+
+                     Lomi Haus
+             Santa Rosa City, Laguna
+              Mobile No. 09123456789
+Sales Date: 2024-07-18     
+Sales ID:   1031           
+-----------------------------------------------
+Item           Size      Qty    Each     Total     
+
+Miki Guisado   Regular   1      75.00     75.00
+Lugaw          Regular   1      70.00     70.00
+-----------------------------------------------
+Total Discount:                            0.00
+Total Sales:                             145.00
+
