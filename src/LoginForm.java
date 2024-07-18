@@ -68,6 +68,20 @@ public class LoginForm extends JFrame {
     }
     
     public void numButton(JButton numButton, String btnNumber) {
+        numButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	System.out.println(focus);
+                if (focus.equals("textField")) {
+                    String userIdText = textField.getText();
+                    userIdText += btnNumber;
+                    textField.setText(userIdText);
+                } else if (focus.equals("passwordField")) {
+                    char[] passwordText = passwordField.getPassword();
+                    String newPassword = new String(passwordText) + btnNumber;
+                    passwordField.setText(newPassword);
+                }               
+            }
+        });
     
     }
     
@@ -221,6 +235,20 @@ public class LoginForm extends JFrame {
         textField.setColumns(10);
         textField.setBounds(20, 131, 280, 38);
         panel_1_1.add(textField);
+        // Check if this field id selected
+        textField.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {          	
+            	focus = "textField";
+                System.out.println(focus);
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                System.out.println("textField lost focus.");
+               
+            }
+        });
         
         login_label = new JLabel("Cashier Login");
         login_label.setHorizontalAlignment(SwingConstants.CENTER);
@@ -242,7 +270,21 @@ public class LoginForm extends JFrame {
         passwordField.setMargin(new Insets(4, 4, 4, 4));
         passwordField.setFont(new Font("Tahoma", Font.PLAIN, 12));
         passwordField.setBounds(20, 195, 280, 38);
-        panel_1_1.add(passwordField);
+        panel_1_1.add(passwordField);      
+        // Check if this field id selected
+        passwordField.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+            	focus = "passwordField";
+            	 System.out.println(focus);
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                System.out.println("textField lost focus.");
+               
+            }
+        });
         
         JLabel lblNewLabel_1_2 = new JLabel("Please enter your user id and password");
         lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -323,6 +365,17 @@ public class LoginForm extends JFrame {
         first_panel.setLayout(gl_first_panel);
         
         first_panel.setVisible(true);
+        
+        numButton(btn_0, "0");   
+        numButton(btn_1, "1");   
+        numButton(btn_2, "2");     
+        numButton(btn_3, "3");     
+        numButton(btn_4, "4");     
+        numButton(btn_5, "5");     
+        numButton(btn_6, "6"); 
+        numButton(btn_7, "7");     
+        numButton(btn_8, "8");     
+        numButton(btn_9, "9");     
        
         cashier_btn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
